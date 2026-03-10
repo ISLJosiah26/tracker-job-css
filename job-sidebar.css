@@ -3,7 +3,7 @@ html, body{
   padding:0;
   background:#fff;
   color:#374151;
-  font-family:"Gotham","Montserrat",Arial,sans-serif;
+  font-family:"Gotham","Gotham SSm","Montserrat",Arial,sans-serif;
 }
 
 body{
@@ -17,61 +17,57 @@ body{
   box-sizing:border-box;
 }
 
-table{
-  width:100%;
-  border-collapse:separate;
-  border-spacing:0 10px;
-}
-
-tr, td{
-  border:0;
-  padding:0;
-  vertical-align:top;
-}
-
-body > ul,
-body > ol{
+#trackerpublishlist,
+#trackerpublishlist ul,
+#trackerpublishlist li{
   margin:0;
   padding:0;
-  list-style:none;
 }
 
-body > ul > li,
-body > ol > li{
+#trackerpublishlist > ul{
   list-style:none;
-  margin:0 0 10px;
+  padding-left:0;
+}
+
+#trackerpublishlist > ul > li{
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+#trackerpublishlist > ul > li > ul{
+  list-style:none;
+  padding-left:0;
+  display:grid;
+  gap:12px;
+}
+
+#trackerpublishlist > ul > li > ul > li{
+  list-style:none;
+  margin:0;
   padding:14px 16px;
   background:#f7f8fb;
   border:1px solid rgba(0,0,0,.06);
   border-radius:12px;
 }
 
-body > ul > li:empty,
-body > ol > li:empty{
+#trackerpublishlist li:empty{
   display:none;
 }
 
-ul li ul,
-ol li ul,
-ul li ol,
-ol li ol{
-  margin:0;
-  padding:0;
-  list-style:none;
+.publish_sector::before{
+  content:"Sector";
+  display:block;
+  margin-bottom:4px;
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+  color:#1f3b73;
+  font-weight:700;
 }
 
-ul li ul li,
-ol li ul li,
-ul li ol li,
-ol li ol li{
-  margin:0;
-  padding:0;
-  background:none;
-  border:0;
-  border-radius:0;
-}
-
-strong, b{
+.publish_reference::before{
+  content:"Reference";
   display:block;
   margin-bottom:4px;
   font-size:13px;
