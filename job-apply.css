@@ -1,22 +1,74 @@
-body{
+html, body{
   margin:0;
-  padding:20px;
-  text-align:center;
+  padding:0;
+  background:#fff;
   font-family:"Gotham","Montserrat",Arial,sans-serif;
 }
 
+body{
+  padding:22px 16px;
+  text-align:center;
+  box-sizing:border-box;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+tr, td{
+  border:0;
+  padding:0;
+  vertical-align:top;
+}
+
+ul, ol{
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+
+li{
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+li:empty{
+  display:none;
+}
+
+body > ul > li,
+body > ol > li{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
 a{
-  display:inline-block;
-  background:#0070CA;
-  color:#fff;
-  padding:14px 28px;
-  border-radius:30px;
-  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:190px;
+  padding:15px 28px;
+  border-radius:999px;
+  background:linear-gradient(135deg,#0070ca,#2d9be8);
+  color:#fff !important;
+  text-decoration:none !important;
   font-size:16px;
-  font-weight:600;
+  line-height:1;
+  font-weight:700;
+  border:0;
+  box-shadow:0 10px 24px rgba(0,112,202,.22);
   transition:all .2s ease;
 }
 
 a:hover{
-  background:#00549A;
+  background:linear-gradient(135deg,#00549a,#0070ca);
+  color:#fff !important;
+  text-decoration:none !important;
 }
