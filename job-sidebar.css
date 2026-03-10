@@ -39,42 +39,44 @@ body{
   list-style:none;
   padding-left:0;
   display:grid;
-  gap:12px;
+  gap:10px;
 }
 
 #trackerpublishlist > ul > li > ul > li{
   list-style:none;
   margin:0;
-  padding:14px 16px;
-  background:#f7f8fb;
-  border:1px solid rgba(0,0,0,.06);
-  border-radius:12px;
+  padding:0;
+  background:none;
+  border:0;
+  border-radius:0;
 }
 
-#trackerpublishlist li:empty{
+#trackerpublishlist li:empty,
+.publish_joblink,
+.publish_description{
   display:none;
 }
 
+.publish_sector,
+.publish_reference{
+  color:#1f2937;
+  font-size:14px;
+}
+
 .publish_sector::before{
-  content:"Sector";
-  display:block;
-  margin-bottom:4px;
-  font-size:13px;
-  text-transform:uppercase;
-  letter-spacing:.04em;
-  color:#1f3b73;
-  font-weight:700;
+  content:"Sector:";
+  margin-right:6px;
+  font-size:14px;
+  color:#6b7280;
+  font-weight:500;
 }
 
 .publish_reference::before{
-  content:"Reference";
-  display:block;
-  margin-bottom:4px;
-  font-size:13px;
-  text-transform:uppercase;
-  letter-spacing:.04em;
-  color:#1f3b73;
-  font-weight:700;
+  content:"Reference:";
+  margin-right:6px;
+  font-size:14px;
+  color:#6b7280;
+  font-weight:500;
 }
 
 a{
