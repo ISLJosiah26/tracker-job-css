@@ -1,7 +1,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: #f3f6fb;
+  background: #ffffff;
   font-family: "Gotham", "Gotham SSm", "Montserrat", Arial, sans-serif;
   color: #163d77;
 }
@@ -30,7 +30,7 @@ html, body {
   min-height: 330px;
   display: flex;
   align-items: flex-start;
-  background: transparent;
+  background: #ffffff;
 }
 
 #trackerpublishlist ul ul {
