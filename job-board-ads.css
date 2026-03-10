@@ -1,0 +1,168 @@
+html, body{
+  margin:0;
+  padding:0;
+  background:transparent;
+  font-family:"Gotham","Gotham SSm","Montserrat",Arial,sans-serif;
+  color:#24324a;
+}
+
+body{
+  padding:0;
+  box-sizing:border-box;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+#trackerpublishlist,
+#trackerpublishlist ul,
+#trackerpublishlist li{
+  margin:0;
+  padding:0;
+}
+
+#trackerpublishlist > ul{
+  list-style:none;
+  padding-left:0;
+  display:grid;
+  gap:22px;
+}
+
+#trackerpublishlist > ul > li{
+  list-style:none;
+  padding:26px 28px;
+  border:1px solid rgba(33,54,110,.12);
+  border-radius:22px;
+  background:#fff;
+  box-shadow:none;
+  transition:border-color .18s ease, transform .18s ease;
+}
+
+#trackerpublishlist > ul > li:hover{
+  transform:translateY(-1px);
+  border-color:rgba(240,133,33,.35);
+}
+
+#trackerpublishlist > ul > li > ul{
+  list-style:none;
+  padding-left:0;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  grid-template-areas:
+    "title title"
+    "date cta"
+    "location cta";
+  gap:10px 20px;
+  align-items:center;
+}
+
+#trackerpublishlist li:empty,
+.publish_salaryfrom:empty,
+.publish_salaryto:empty,
+.publish_salaryper:empty{
+  display:none !important;
+}
+
+.publish_title{
+  grid-area:title;
+  font-size:30px;
+  line-height:1.15;
+  font-weight:700;
+  letter-spacing:-0.02em;
+  color:#21366e;
+  margin-bottom:4px;
+}
+
+.publish_publishdate{
+  grid-area:date;
+  font-size:16px;
+  line-height:1.4;
+  color:#5d6678;
+  display:block;
+}
+
+.publish_location{
+  grid-area:location;
+  font-size:16px;
+  line-height:1.4;
+  color:#5d6678;
+  display:block;
+}
+
+.publish_joblink{
+  grid-area:cta;
+  justify-self:end;
+  align-self:center;
+  list-style:none;
+}
+
+.publish_joblink a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:170px;
+  padding:14px 24px;
+  border-radius:999px;
+  background:#21366e;
+  color:#fff !important;
+  text-decoration:none !important;
+  font-size:0;
+  line-height:1;
+  font-weight:700;
+  box-shadow:none;
+  transition:background-color .18s ease, transform .18s ease;
+}
+
+.publish_joblink a::before{
+  content:"View Details";
+  font-size:15px;
+  line-height:1;
+  font-weight:700;
+  color:#fff;
+}
+
+.publish_joblink a:hover{
+  background:#182954;
+  transform:translateY(-1px);
+}
+
+.publish_salaryfrom,
+.publish_salaryto,
+.publish_salaryper{
+  display:none !important;
+}
+
+@media (max-width: 767px){
+  #trackerpublishlist > ul{
+    gap:16px;
+  }
+
+  #trackerpublishlist > ul > li{
+    padding:20px 18px;
+    border-radius:18px;
+  }
+
+  #trackerpublishlist > ul > li > ul{
+    grid-template-columns:1fr;
+    grid-template-areas:
+      "title"
+      "date"
+      "location"
+      "cta";
+    gap:10px;
+  }
+
+  .publish_title{
+    font-size:24px;
+  }
+
+  .publish_joblink{
+    justify-self:start;
+  }
+
+  .publish_joblink a{
+    width:100%;
+    min-width:0;
+  }
+}
