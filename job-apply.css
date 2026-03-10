@@ -2,7 +2,7 @@ html, body{
   margin:0;
   padding:0;
   background:#fff;
-  font-family:"Gotham","Montserrat",Arial,sans-serif;
+  font-family:"Gotham","Gotham SSm","Montserrat",Arial,sans-serif;
 }
 
 body{
@@ -15,17 +15,6 @@ body{
   box-sizing:border-box;
 }
 
-table{
-  width:100%;
-  border-collapse:collapse;
-}
-
-tr, td{
-  border:0;
-  padding:0;
-  vertical-align:top;
-}
-
 ul, ol{
   margin:0;
   padding:0;
@@ -33,33 +22,32 @@ ul, ol{
 }
 
 li{
-  list-style:none;
   margin:0;
   padding:0;
+  list-style:none;
 }
 
 li:empty{
   display:none;
 }
 
-body > ul > li,
-body > ol > li{
+.publish_joblink{
   display:flex;
   justify-content:center;
   align-items:center;
 }
 
-a{
+.publish_joblink a{
   display:inline-flex;
   align-items:center;
   justify-content:center;
   min-width:190px;
   padding:15px 28px;
   border-radius:999px;
-  background:linear-gradient(135deg,#0070ca,#2d9be8);
+  background:linear-gradient(135deg,#0070ca,#39a0e6);
   color:#fff !important;
   text-decoration:none !important;
-  font-size:16px;
+  font-size:0;
   line-height:1;
   font-weight:700;
   border:0;
@@ -67,7 +55,15 @@ a{
   transition:all .2s ease;
 }
 
-a:hover{
+.publish_joblink a::before{
+  content:"Apply Now";
+  font-size:16px;
+  line-height:1;
+  font-weight:700;
+  color:#fff;
+}
+
+.publish_joblink a:hover{
   background:linear-gradient(135deg,#00549a,#0070ca);
   color:#fff !important;
   text-decoration:none !important;
