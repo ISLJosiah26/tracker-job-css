@@ -3,7 +3,7 @@ html, body{
   padding:0;
   background:#fff;
   color:#30343b;
-  font-family:"Gotham","Montserrat",Arial,sans-serif;
+  font-family:"Gotham","Gotham SSm","Montserrat",Arial,sans-serif;
 }
 
 body{
@@ -17,33 +17,37 @@ body{
   box-sizing:border-box;
 }
 
-table{
-  width:100%;
-  border-collapse:collapse;
-}
-
-tr, td{
-  border:0;
-  padding:0;
-  vertical-align:top;
-}
-
-body > ul,
-body > ol{
+#trackerpublishlist,
+#trackerpublishlist ul,
+#trackerpublishlist ol,
+#trackerpublishlist li{
   margin:0;
   padding:0;
-  list-style:none;
 }
 
-body > ul > li,
-body > ol > li{
+#trackerpublishlist > ul,
+#trackerpublishlist > ol{
+  list-style:none;
+  padding-left:0;
+  margin:0;
+}
+
+#trackerpublishlist > ul > li,
+#trackerpublishlist > ol > li{
   list-style:none;
   margin:0;
   padding:0;
 }
 
-body > ul > li:empty,
-body > ol > li:empty{
+#trackerpublishlist > ul > li > ul,
+#trackerpublishlist > ol > li > ul,
+#trackerpublishlist > ul > li > ol,
+#trackerpublishlist > ol > li > ol{
+  margin:0;
+  padding-left:28px;
+}
+
+#trackerpublishlist li:empty{
   display:none;
 }
 
@@ -52,7 +56,7 @@ p{
 }
 
 ul, ol{
-  margin:14px 0 18px 0;
+  margin:14px 0 18px;
   padding-left:24px;
 }
 
