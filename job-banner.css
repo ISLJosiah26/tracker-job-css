@@ -86,6 +86,10 @@ html, body {
   white-space: nowrap;
 }
 
+.publish_location:empty {
+  display: none !important;
+}
+
 .publish_salaryfrom,
 .publish_salaryto,
 .publish_salaryper {
