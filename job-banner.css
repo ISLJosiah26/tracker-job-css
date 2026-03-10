@@ -1,9 +1,9 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: #163d77;
+  background: #f3f6fb;
   font-family: "Gotham", "Gotham SSm", "Montserrat", Arial, sans-serif;
-  color: #ffffff;
+  color: #163d77;
 }
 
 #trackerpublishlist,
@@ -30,9 +30,13 @@ html, body {
   min-height: 330px;
   display: flex;
   align-items: flex-start;
+  background: transparent;
 }
 
 #trackerpublishlist ul ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   width: 100%;
   max-width: 760px;
 }
@@ -49,36 +53,37 @@ html, body {
 }
 
 .publish_worktype {
-  margin: 0 0 14px;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 1.4;
-  color: rgba(255,255,255,0.92);
-  letter-spacing: 0.01em;
+  order: 2;
 }
 
 .publish_title {
+  order: 1;
+  flex: 0 0 100%;
   margin: 0 0 24px;
   font-size: 56px;
   line-height: 1.02;
   font-weight: 700;
   letter-spacing: -0.03em;
-  color: #ffffff;
+  color: #163d77;
   word-break: break-word;
 }
 
+.publish_worktype,
 .publish_publishdate,
 .publish_location {
-  margin: 0 0 10px;
-  font-size: 17px;
-  line-height: 1.45;
-  font-weight: 400;
-  color: rgba(255,255,255,0.94);
-}
-
-.publish_publishdate:before {
-  content: "Posted on ";
-  opacity: 0.92;
+  order: 2;
+  display: inline-flex;
+  align-items: center;
+  margin: 0 10px 10px 0;
+  padding: 8px 14px;
+  font-size: 15px;
+  line-height: 1.3;
+  font-weight: 600;
+  color: #163d77;
+  background: rgba(22, 61, 119, 0.1);
+  border: 1px solid rgba(22, 61, 119, 0.2);
+  border-radius: 999px;
+  white-space: nowrap;
 }
 
 .publish_salaryfrom,
@@ -110,14 +115,11 @@ html, body {
     margin-bottom: 18px;
   }
 
-  .publish_worktype {
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
-
+  .publish_worktype,
   .publish_publishdate,
   .publish_location {
-    font-size: 15px;
+    font-size: 14px;
     margin-bottom: 8px;
+    padding: 7px 12px;
   }
 }
